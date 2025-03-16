@@ -18,6 +18,14 @@ export function App() {
   );
 }
 
+export function Card({ children }: { children: React.ReactNode }) {
+  return(
+    <div className="card-content">
+      { children }
+    </div>
+  );
+}
+
 export default function TodoList() {
   return (
     <>
@@ -36,6 +44,23 @@ export default function TodoList() {
           <li>Prepare aeronautics lectures</li>
           <li>Work on the alcohol-fuelled engine</li>
         </ul>
+      </div>
+
+      <div>
+        <Card>
+          <h1>Photo</h1>
+          <Image
+            className='avatar'
+            src="https://i.imgur.com/OKS67lhm.jpg"
+            alt="aklilu Lemma"
+            width={70}
+            height={70}
+          />
+        </Card>
+        <Card>
+          <h1>About</h1>
+          <p>Aklilu Lemma was a distinguished Ethiopian scientist who discovered a natural treatment to schistosomiasis.</p>
+        </Card>
       </div>
     </>
   );
